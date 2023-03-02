@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public bool _isClicked = false;
 
-    public GameObject _gamePanel;
+    public GameObject _gamePanel,_questionImage;
 
     int _score = 0;
     int _answerCount = 0;
@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
         if (_answerCount == _dictionary.Length)
         {
             _gamePanel.SetActive(true);
+            _questionImage.SetActive(false);
 
         }
     }
