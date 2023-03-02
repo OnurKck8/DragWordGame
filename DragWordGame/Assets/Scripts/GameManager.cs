@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     int _score = 0;
     int _answerCount = 0;
 
+    [SerializeField] private AudioSource _sound;
     void Start()
     {
         _selectedButtons = new List<GameObject>();
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
                 foreach (GameObject button in _selectedButtons)
                 {
                     button.GetComponent<ButtonController>()._destroyword = true;
-                }
+                    _sound.Play();               }
             }
         }
 
